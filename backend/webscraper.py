@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import openai
 
-openai.api_key = 'banana'
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def fetch_website_content(url):
     try:
