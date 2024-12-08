@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import openai
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = 'banana'
 
 def fetch_website_content(url):
     try:
@@ -25,7 +25,7 @@ def summarize_content(content):
             model="gpt-4",
             messages=[
                 {"role": "system", "content": "Harvard Data Analytics Group reaches out to companies and does data analysis and consulting for various clients. You are an assistant that, given text scraped off a company website, will summarize it so Harvard Data Analytics Group can reach out to said company about partnering with them."},
-                {"role": "user", "content": f"Summarize this content to describe what the company does:\n\n{content}"}
+                {"role": "user", "content": f"Briefly summarize this content to describe what the company does:\n\n{content}"}
             ]
         )
         summary = response['choices'][0]['message']['content']
@@ -43,9 +43,8 @@ def run_website_analytics(url):
             summary = summarize_content(content)
             if summary:
                 return summary
-            else:
-                print("Failed to generate a summary.")
-        else:
-            print("No relevant content found on the website.")
-    else:
-        print("Failed to fetch the website.")
+
+
+def transform_webscraped_df(df):
+  df["Brief Summary"] = df["Website"].apply(run_website_analytics)
+  return df
