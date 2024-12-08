@@ -33,6 +33,8 @@ def load_and_process_data(filepath):
         ),
         axis=1
     )
+
+    cases_df = transform_webscraped_df(cases_df)
     return cases_df
 
 def setup_pinecone_index(cases_df):
