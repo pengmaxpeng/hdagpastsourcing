@@ -48,3 +48,7 @@ jobs:
         aws lambda update-function-code \
           --function-name generate_email_api \
           --zip-file fileb://lambda_function.zip
+          
+        aws lambda update-function-configuration \
+              --function-name generate_email_api \
+              --handler backend.testapi.lambda_handler  # Explicitly set the handler
