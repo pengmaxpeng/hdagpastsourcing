@@ -105,6 +105,16 @@ def generate_email(company_info, retriever):
         1. Introduction to Harvard Data Analytics Group; Harvard Undergraduate Data Analytics Group (HDAG) is a non-profit student organization at Harvard College dedicated to helping organizations make smarter, data-driven decisions and achieve their strategic goals by translating their data into meaningful and actionable information. 
         2. Mention the relevant case studies from the database that are similar to the client's needs. Use the case studies to highlight the successful outcomes and the value we can provide. Be sure to mention the case primarily by the company that it was done for.
         3. Include a call to action to schedule a meeting or a call to discuss further.
+        
+        Here's an example for Novartis. 
+    I hope this email finds you well. I understand your time is valuable, but please give me two minutes of your time. My name is Kevin Liu, and I help represent the Harvard Undergraduate Data Analytics Group (HDAG). HDAG is a non-profit student organization at Harvard College dedicated to helping organizations make smarter, data-driven decisions and achieve their strategic goals by translating data into meaningful and actionable insights.
+ 	We understand that as the Chief Strategy and Growth at Novartis, a leading organization in the pharmaceuticals space, you may face challenges meeting your ESG expectations. HDAG is uniquely equipped to help you achieve your goals by leveraging our proven expertise and diverse project experience.
+	HDAG has worked with a wide variety of clients across industries, including Coca-Cola, the World Health Organization, and Hewlett-Packard. More relevant to your case, we have worked with UNIDO to help identify and visualize key indicators for their ESG goals in developing areas. 
+	I would love to explore potential engagement opportunities between Novartis and HDAG. I completely understand if you are unable to respond at this time. When you’re able, I would love to find time with you or a colleague to schedule a quick chat about how HDAG can help support your goals!
+
+        Here's the used template:
+    I hope this email finds you well. My name is [Your Name], and I help represent the Harvard Undergraduate Data Analytics Group (HDAG). HDAG is a non-profit student organization at Harvard College dedicated to helping organizations make smarter, data-driven decisions and achieve their strategic goals by translating data into meaningful and actionable insights.
+    We understand that as the {title} at {company}, a leading organization in the {industry} space, you may face challenges in [specific area from "brief summary"]. HDAG is uniquely equipped to help you achieve your goals by leveraging our proven expertise and diverse project experience.
     """
 
     prompt = PromptTemplate(input_variables=["company_info", "retrieved_cases"], template=prompt_template)
