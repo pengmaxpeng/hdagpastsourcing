@@ -1,1 +1,7 @@
-boto3
+os
+json
+pandas
+python-dotenv
+pinecone-client
+langchain
+openai
