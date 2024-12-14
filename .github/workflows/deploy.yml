@@ -4,7 +4,7 @@ on:
   workflow_dispatch: # Manually trigger this workflow
   push:
     branches:
-      - main  # Trigger on push to the main branch
+      - master  # Trigger on push to the main branch
 
 jobs:
   build-zip:
