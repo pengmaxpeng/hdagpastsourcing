@@ -1,5 +1,3 @@
-os
-json
 pandas
 python-dotenv
 pinecone-client
